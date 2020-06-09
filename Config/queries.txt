@@ -1,0 +1,1340 @@
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?group ?label where {
+  ?settings a <http://ontotext.com/openpolicy#SystemConfiguration> . 
+  ?settings <http://ontotext.com/openpolicy#hasConfigurationGroup> ?group . 
+  ?group a <http://ontotext.com/openpolicy#ConfigurationGroup> . 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?group ?label where {
+  ?settings a <http://ontotext.com/openpolicy#SystemConfiguration> . 
+  ?settings <http://ontotext.com/openpolicy#hasConfigurationGroup> ?group . 
+  ?group a <http://ontotext.com/openpolicy#ConfigurationGroup> . 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#UISettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#UISettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#FacetsSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#FacetsSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#DocumentFeaturesSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#DocumentFeaturesSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?group ?label where {
+  ?settings a <http://ontotext.com/openpolicy#AdminConfiguration> . 
+  ?settings <http://ontotext.com/openpolicy#hasConfigurationGroup> ?group . 
+  ?group a <http://ontotext.com/openpolicy#ConfigurationGroup> . 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?group ?label where {
+  ?settings a <http://ontotext.com/openpolicy#AdminConfiguration> . 
+  ?settings <http://ontotext.com/openpolicy#hasConfigurationGroup> ?group . 
+  ?group a <http://ontotext.com/openpolicy#ConfigurationGroup> . 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#NavigationPaneSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#NavigationPaneSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#SearchResultsSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#EmailSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#SplashSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#SearchResultsSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#CamsSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#SplashSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?property ?name ?value ?description 
+where { 
+	 <http://ontotext.com/openpolicy#CamsSettings> <http://ontotext.com/openpolicy#hasConfigurationProperty> ?property .
+	 ?property 
+		<http://ontotext.com/openpolicy#hasPropertyName> ?name ;
+		<http://ontotext.com/openpolicy#hasPropertyValue> ?value . 
+	 optional { ?property <http://ontotext.com/openpolicy#hasPropertyDescription> ?description } 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteSearchFilter> ?count . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentGroup-USGovernment> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentGroup-USGovernment> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentGroup-USGovernment> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+
+select ?concept where { ?concept a skos:Concept; rdfs:label ?label filter(str(?label)= "Responsibilities Search") }
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+
+select ?concept where { ?concept a skos:Concept; rdfs:label ?label filter(str(?label)= "Responsibilities Search") }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+select ?prefLabel
+where {
+	<http://www.w3.org/2004/02/skos/core#Responsibilities+Search> a skos:Concept; skos:prefLabel ?prefLabel .
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentGroup-USGovernment-OSD> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentGroup-USGovernment-OSD> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentGroup-USGovernment-OSD> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#Publication-61eb5731-a28a-46a4-8317-b814deaf0c14> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#Publication-61eb5731-a28a-46a4-8317-b814deaf0c14> a ?type } 
+  optional { <http://ontotext.com/openpolicy#Publication-61eb5731-a28a-46a4-8317-b814deaf0c14> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?document where { 
+	<http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?document . 
+} limit 1
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_sec-4-19_20> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_sec-4-19_20> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteSearchFilter> ?count . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?document where { 
+	<http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_sec-4-19_20> <http://ontotext.com/openpolicy#inDocument> ?document . 
+} limit 1
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+select ?prefLabel
+where {
+	<http://www.w3.org/2004/02/skos/core#Responsibilities+Search> a skos:Concept; skos:prefLabel ?prefLabel .
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+  # Lucene Filter
+  {
+      select ?paragraph where { 
+         [] a inst:CaseInsensitiveWithoutStemmingIndex ;
+             con:query "text:energy*" ; 
+             con:entities ?paragraph . 
+      } 
+  }
+
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+  # Lucene Filter
+  {
+      select ?paragraph where { 
+         [] a inst:CaseInsensitiveWithoutStemmingIndex ;
+             con:query "text:energy*" ; 
+             con:entities ?paragraph . 
+      } 
+  }
+
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteSearchFilter> ?count . 
+}
+
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+select ?prefLabel
+where {
+	<http://www.w3.org/2004/02/skos/core#Responsibilities+Search> a skos:Concept; skos:prefLabel ?prefLabel .
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?document where { 
+	<http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?document . 
+} limit 1
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+  # Lucene Filter
+  {
+      select ?paragraph where { 
+         [] a inst:CaseInsensitiveWithoutStemmingIndex ;
+             con:query "text:energy*" ; 
+             con:entities ?paragraph . 
+      } 
+  }
+
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> a ?type } 
+  optional { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> a ?type } 
+  optional { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+  # Lucene Filter
+  {
+      select ?paragraph where { 
+         [] a inst:CaseInsensitiveWithoutStemmingIndex ;
+             con:query "text:energy*" ; 
+             con:entities ?paragraph . 
+      } 
+  }
+
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteSearchFilter> ?count . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?document where { 
+	<http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?document . 
+} limit 1
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+  # Lucene Filter
+  {
+      select ?paragraph where { 
+         [] a inst:CaseInsensitiveWithoutStemmingIndex ;
+             con:query "text:energy*" ; 
+             con:entities ?paragraph . 
+      } 
+  }
+
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+select ?prefLabel
+where {
+	<http://www.w3.org/2004/02/skos/core#Responsibilities+Search> a skos:Concept; skos:prefLabel ?prefLabel .
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?document where { 
+	<http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_6_7> <http://ontotext.com/openpolicy#inDocument> ?document . 
+} limit 1
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteSearchFilter> ?count . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_sec-4-19_20> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_sec-4-19_20> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+select ?document where { 
+	<http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1_sec-4-19_20> <http://ontotext.com/openpolicy#inDocument> ?document . 
+} limit 1
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+prefix protont: <http://proton.semanticweb.org/2006/05/protont#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix con: <http://www.ontotext.com/connectors/lucene#>
+prefix inst: <http://www.ontotext.com/connectors/lucene/instance#>
+select distinct ?document ?paragraph ?para_id ?para_title ?para_text ?para_index ?para_nestingLevel 
+from named <http://www.ontotext.com/count> 
+where { 
+  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+  {
+    ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?para_index . 
+    ?paragraph <http://ontotext.com/openpolicy#documentElementNestingLevel> ?para_nestingLevel . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementId> ?para_id } 
+    optional { ?paragraph <http://proton.semanticweb.org/2006/05/protont#title> ?para_title } 
+    optional { ?paragraph <http://www.w3.org/2000/01/rdf-schema#label> ?para_label } 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementText> ?para_text } 
+  }
+
+  # Entities Filter
+ { ?paragraph op:relatedTo <http://www.w3.org/2004/02/skos/core#Responsibilities+Search> . }
+
+  # Documents Filter 
+{ <http://ontotext.com/openpolicy#DocumentTreesRoot> <http://ontotext.com/openpolicy#hasDocument> ?document . }  ?paragraph <http://ontotext.com/openpolicy#inDocument> ?document . 
+}
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+select ?prefLabel
+where {
+	<http://www.w3.org/2004/02/skos/core#Responsibilities+Search> a skos:Concept; skos:prefLabel ?prefLabel .
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> a ?type } 
+  optional { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#> 
+select ?paragraph ?label where { 
+  { 
+	  <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> <http://ontotext.com/openpolicy#inDocument> ?doc . 
+	  ?doc <http://ontotext.com/openpolicy#hasFeature> ?paragraph . 
+	  ?paragraph rdf:type <http://ontotext.com/openpolicy#PublicationFeature-PublicationAlias> ; 
+               <http://ontotext.com/openpolicy#hasFeatureValue> ?label 
+  } UNION { 
+    ?paragraph op:hasParagraph+ <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> ; 
+               <http://proton.semanticweb.org/2006/05/protons#mainLabel> ?label . 
+    optional { ?paragraph <http://ontotext.com/openpolicy#documentElementIndex> ?index } 
+  } 
+} order by ?index
+SPARQL
+select ?type from <http://www.ontotext.com/explicit> where { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> a ?type }
+SPARQL
+select ?type from <http://www.ontotext.com/explicit> where { <http://ontotext.com/openpolicy#Document-b06bb95e-9128-48ab-9c00-e901907a9a3d_1> a ?type }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix op: <http://ontotext.com/openpolicy#>
+select ?label ?type (sample(?child) as ?hasChild) 
+where { 
+  <http://ontotext.com/openpolicy#DocumentTreesRoot> rdfs:label ?label . 
+  graph <http://www.ontotext.com/explicit> { <http://ontotext.com/openpolicy#DocumentTreesRoot> a ?type } 
+  optional { <http://ontotext.com/openpolicy#DocumentTreesRoot> op:hasGroup|op:hasParagraph ?child } 
+} group by ?label ?type
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteSearchFilter> ?count . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?historyRecord 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasHistory> ?historyRecord . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?count 
+from <http://www.ontotext.com/count>
+where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>;     <http://ontotext.com/openpolicy#hasFavouriteDocumentsFilter> ?count . 
+}
+
+SPARQL
+select ?user where { ?user a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasUsername> 'RWANG@lmi.org' }
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?filterId ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> <http://ontotext.com/openpolicy#hasCurrentDocumentFilter> ?filterId . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?filterId <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+prefix op: <http://ontotext.com/openpolicy#>
+prefix protonkm: <http://proton.semanticweb.org/2006/05/protonkm#>
+select ?defaultDocumentsFilterURI ?name ?query where { 
+  <http://ontotext.com/openpolicy#RWANG@lmi.org> a <http://proton.semanticweb.org/2006/05/protonkm#User>; <http://ontotext.com/openpolicy#hasDefaultDocumentFilter> ?defaultDocumentsFilterURI . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterName> ?name . 
+  ?defaultDocumentsFilterURI <http://ontotext.com/openpolicy#hasFilterValue> ?query . 
+}
+
+SPARQL
+select ?o from <http://www.ontotext.com/count> where { ?o a <http://proton.semanticweb.org/2006/05/protont#Document> }
+SPARQL
+select ?o from <http://www.ontotext.com/count> where { ?o a <http://ontotext.com/openpolicy#Publication> }
+SPARQL
+select ?o from <http://www.ontotext.com/count> where { ?o a <http://ontotext.com/openpolicy#DocumentsTreeElement> }
+SPARQL
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+select (count(?concept) as ?count) where {
+    ?concept a <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> ?label . 
+}
+
+SPARQL
+prefix skos: <http://www.w3.org/2004/02/skos/core#>select ?r from <http://www.ontotext.com/count> where { [] a skos:Concept; <http://www.w3.org/2000/01/rdf-schema#label> ?r }
+SPARQL
+prefix skos: <http://www.w3.org/2004/02/skos/core#>select ?r from <http://www.ontotext.com/count> where { [] a skos:Concept; <http://www.w3.org/2004/02/skos/core#abbreviation> ?r }
+SPARQL
+prefix skos: <http://www.w3.org/2004/02/skos/core#>select ?r from <http://www.ontotext.com/count> where { [] a skos:Concept; <http://www.w3.org/2004/02/skos/core#acronym> ?r }
+SPARQL
+prefix skos: <http://www.w3.org/2004/02/skos/core#>select ?r from <http://www.ontotext.com/count> where { [] a skos:Concept; <http://www.w3.org/2004/02/skos/core#synonym> ?r }
+SPARQL
+prefix skos: <http://www.w3.org/2004/02/skos/core#>select ?r from <http://www.ontotext.com/count> where { [] a skos:Concept; <http://www.w3.org/2004/02/skos/core#related> ?r }

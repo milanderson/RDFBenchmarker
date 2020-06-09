@@ -1,0 +1,10 @@
+load
+    content
+    ontology
+clearing
+    content
+    ontology
+partial swaps
+SPARQL
+    correctness
+    response time
