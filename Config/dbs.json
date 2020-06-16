@@ -1,10 +1,10 @@
 {
     "RootDatabase": {
-        "Host": "http://0.0.0.0:8082/",
+        "Host": "http://10.20.168.42:8082",
         "UseAuth": "False",
         "User": "",
         "Pass": "",
-        "DatabaseName": "graphdb/repositories/myrepo"
+        "DatabaseName": "graphdb/repositories/openpolicy"
     },
     "ComparisonDatabases": [
     ]
