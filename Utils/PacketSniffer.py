@@ -28,7 +28,6 @@ class TCPPacketSniffer():
             if self.isMatch(p):
                 # WRITE DATA HERE
                 # self.log(------)
-                print('aa')
                 pass
 
 class Packet():
