@@ -77,10 +77,6 @@ class IPFrame():
             self.tar_ip =socket.inet_ntoa(target)
             self.data = data[self.header_len:]
 
-    @staticmethod
-    def _parseIPV4(addr):
-        return '.'.join(map(str, addr))
-
 class TCPFrame():
     def __init__(self, data):
         self.src_port, self.tar_port, self.seq_no, self.ack_no, self.header_len, self.window = struct.unpack("! H H I I B 1x H", data[:16])
