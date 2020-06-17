@@ -42,7 +42,7 @@ class Packet():
                 self.tcpFrame = TCPFrame(self.ipFrame.data)
 
 class EthernetFrame():
-    class ETH_PROTO():
+    class PROTOCOL():
         IPV4 = "0800"
         IPv6 = "86DD"
         ARP = "0806"
@@ -62,7 +62,7 @@ class EthernetFrame():
         return mac_addr
 
 class IPFrame():
-    class Protocol():
+    class PROTOCOL():
         ICMP = 1
         TCP = 6
         UDP = 17
