@@ -35,10 +35,10 @@ class Packet():
     def __init__(self, data, addr):
         self.addr = addr
         self.ethFrame = EthernetFrame(data)
-        if self.ethFrame.protocol in [EthernetFrame.ETH_PROTO.IPV4, EthernetFrame.ETH_PROTO.IPv6]:
+        if self.ethFrame.protocol in [EthernetFrame.PROTOCOL.IPV4, EthernetFrame.PROTOCOL.IPv6]:
             self.ipFrame = IPFrame(self.ethFrame.data)
 
-            if self.ipFrame.protocol == IPFrame.Protocol.TCP:
+            if self.ipFrame.protocol == IPFrame.PROTOCOL.TCP:
                 self.tcpFrame = TCPFrame(self.ipFrame.data)
 
 class EthernetFrame():
