@@ -15,9 +15,9 @@ class TCPPacketSniffer():
 
     def isMatch(self, packet):
         #TODO: Better IP checking
-        return hasattr(packet, "ipFrame") and hasattr(packet, "tcpFrame") and \
+        return hasattr(packet, "ipFrame") and (packet.ipFrame.offset > 1 or (hasattr(packet, "tcpFrame") and \
         (self.host in ["", "0.0.0.0"] or self.host == packet.ipFrame.tar_ip) and \
-        (self.port == -1 or self.port == packet.tcpFrame.tar_port)
+        (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
 
     def run(self):
         s = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(0x0800))
@@ -71,7 +71,8 @@ class IPFrame():
         self.version = ord(data[0]) >> 4
         self.header_len = (ord(data[0]) & 0xF) * 4
         if self.version == 4:
-            self.packet_len, self.ttl, self.protocol, src, target = struct.unpack('! H 4x B B 2x 4s 4s', data[2:20])
+            self.packet_len, self.id, self.offset self.ttl, self.protocol, src, target = struct.unpack('! H H H B B 2x 4s 4s', data[2:20])
+            self.offset = self.offset & 8191
             self.src_ip = socket.inet_ntoa(src)
             self.tar_ip =socket.inet_ntoa(target)
             self.data = data[self.header_len:]
