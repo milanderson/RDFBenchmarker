@@ -6,6 +6,9 @@ class TCPPacketSniffer():
         self.port = port
         self.bufferSize = bufferSize
         self.outfile = open(outFname, "w") if outFname else None
+        
+        
+        self.loose_packets = {}
 
     def _log(self, msg):
         if self.outfile is not None:
@@ -26,6 +29,18 @@ class TCPPacketSniffer():
             data, addr = s.recvfrom(self.bufferSize)
             p = Packet(data, addr)
             if self.isMatch(p):
+                '''
+                if p.ipFrame.offset > 0:
+                    key = str(p.ipFrame.id)
+                    if key in self.loose_packets:
+                        self.loose_packets[key].append(p)
+                        if sum([len(x.ipFrame.data) for x in self.loose_packets[key]]) == p.ipFrame.packet_len:
+                            p = self.loose_packets[key][0]
+                            p.ipFrame.data = "".join([x.ipFrame.data for x in sorted(self.loose_packets[key], lambda x: x.ipFrame.offset)])
+                if p.ipFrame.packet_len > p.ipFrame.data:
+                    self.loose_packets[str([.ipFrame.id)] = [p]
+                    continue
+                '''
                 # WRITE DATA HERE
                 # self.log(------)
                 pass
