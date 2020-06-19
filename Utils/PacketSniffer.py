@@ -16,9 +16,25 @@ class TCPPacketSniffer():
         else:
             print(msg)
 
+    def _rejoinTCPPackets(self, packet):
+        key = str(packet.ipFrame.id)
+        if packet.ipFrame.offset > 0:
+            if key in self.loose_packets:
+                self.loose_packets[key].append(packet)
+                if sum([len(x.ipFrame.data) for x in self.loose_packets[key]]) == packet.ipFrame.packet_len:
+                    packet = self.loose_packets[key][0]
+                    packet.ipFrame.data = "".join([x.ipFrame.data for x in sorted(self.loose_packets[key], lambda x: x.ipFrame.offset)])
+                    del self.loose_packets[key]
+                else:
+                    packet = None
+        if packet.ipFrame.packet_len > packet.ipFrame.data:
+            self.loose_packets[key] = [packet]
+            packet = None
+        return packet
+            
     def isMatch(self, packet):
         #TODO: Better IP checking
-        return hasattr(packet, "ipFrame") and (packet.ipFrame.offset > 0 or (hasattr(packet, "tcpFrame") and \
+        return packet and hasattr(packet, "ipFrame") and (packet.ipFrame.offset > 0 or (hasattr(packet, "tcpFrame") and \
         (self.host in ["", "0.0.0.0"] or self.host == packet.ipFrame.tar_ip) and \
         (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
 
@@ -28,20 +44,8 @@ class TCPPacketSniffer():
         while True:
             data, addr = s.recvfrom(self.bufferSize)
             p = Packet(data, addr)
+            #p = self._rejoinTCPPackets(p)
             if self.isMatch(p):
-                '''
-                if p.ipFrame.offset > 0:
-                    key = str(p.ipFrame.id)
-                    if key in self.loose_packets:
-                        self.loose_packets[key].append(p)
-                        if sum([len(x.ipFrame.data) for x in self.loose_packets[key]]) == p.ipFrame.packet_len:
-                            p = self.loose_packets[key][0]
-                            p.ipFrame.data = "".join([x.ipFrame.data for x in sorted(self.loose_packets[key], lambda x: x.ipFrame.offset)])
-                            del self.loose_packets[key]
-                if p.ipFrame.packet_len > p.ipFrame.data:
-                    self.loose_packets[str([.ipFrame.id)] = [p]
-                    continue
-                '''
                 # WRITE DATA HERE
                 # self.log(------)
                 pass
