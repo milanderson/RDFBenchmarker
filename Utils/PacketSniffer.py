@@ -10,11 +10,12 @@ class TCPPacketSniffer():
         
         self.loose_packets = {}
 
-    def _log(self, msg):
+    def _log(self, *args):
         if self.outfile is not None:
-            self.outfile.write(msg)
+            for a in args:
+                self.outfile.write(a.__str__())
         else:
-            print(msg)
+            print(args)
 
     def _rejoinTCPPackets(self, packet):
         key = str(packet.ipFrame.id)
@@ -34,9 +35,10 @@ class TCPPacketSniffer():
             
     def isMatch(self, packet):
         #TODO: Better IP checking
-        return packet and hasattr(packet, "ipFrame") and (packet.ipFrame.offset > 0 or (hasattr(packet, "tcpFrame") and \
-        (self.host in ["", "0.0.0.0"] or self.host == packet.ipFrame.tar_ip) and \
-        (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
+        return packet and hasattr(packet, "ipFrame") and \
+            (self.host in ["", "0.0.0.0"] or self.host == packet.ipFrame.tar_ip) and \
+            (packet.ipFrame.offset > 0 or \
+            (hasattr(packet, "tcpFrame") and (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
 
     def run(self):
         s = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(0x0800))
@@ -47,8 +49,9 @@ class TCPPacketSniffer():
             #p = self._rejoinTCPPackets(p)
             if self.isMatch(p):
                 # WRITE DATA HERE
-                # self.log(------)
-                pass
+                self._log("ID: ", p.ipFrame.id, "offset: ", p.ipFrame.offset, "Header Length: ", p.ipFrame.packet_len, "Packet Len: ", len(p.ipFrame.data), "has TCP: ", hasattr(p, "tcpFrame"))
+                if hasattr(p, "tcpFrame"):
+                    self._log(p.tcpFrame.data)
 
 class Packet():
     def __init__(self, data, addr):
@@ -91,7 +94,7 @@ class IPFrame():
         self.version = ord(data[0]) >> 4
         self.header_len = (ord(data[0]) & 0xF) * 4
         if self.version == 4:
-            self.packet_len, self.id, self.offset self.ttl, self.protocol, src, target = struct.unpack('! H H H B B 2x 4s 4s', data[2:20])
+            self.packet_len, self.id, self.offset, self.ttl, self.protocol, src, target = struct.unpack('! H H H B B 2x 4s 4s', data[2:20])
             self.offset = self.offset & 8191
             self.src_ip = socket.inet_ntoa(src)
             self.tar_ip =socket.inet_ntoa(target)
