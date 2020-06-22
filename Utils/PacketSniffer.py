@@ -1,12 +1,12 @@
 import socket, struct, binascii, argparse
 
 class TCPPacketSniffer():
-    def __init__(self, host="", port=-1, bufferSize=100000, outFname=""):
+    def __init__(self, host="", port=-1, bufferSize=100000, outFname="", minCaptureSize=52):
         self.host = host
         self.port = port
         self.bufferSize = bufferSize
         self.outfile = open(outFname, "w") if outFname else None
-        
+        self.minCapSize = minCaptureSize
         
         self.loose_packets = {}
 
@@ -35,7 +35,7 @@ class TCPPacketSniffer():
             
     def isMatch(self, packet):
         #TODO: Better IP checking
-        return packet and hasattr(packet, "ipFrame") and \
+        return packet and packet.ethFrame.data > self.minCapSize + 12 and hasattr(packet, "ipFrame") and \
             (self.host in ["", "0.0.0.0"] or self.host == packet.ipFrame.tar_ip) and \
             (packet.ipFrame.offset > 0 or \
             (hasattr(packet, "tcpFrame") and (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
@@ -116,6 +116,7 @@ if __name__ == "__main__":
     parser.add_argument('-port', type=int, action='store', default=-1, help='Set receiving port')
     parser.add_argument('-bufferSize', '-B', type=int, action='store', default=10000, help='Set read buffer size, default 100000')
     parser.add_argument('-outFname', '-F', type=str, action='store', default="", help='Set ouput filename, defaults to stdout')
+    parser.add_argument('-minCaptureSize', '-m', type=int, action='store', default=52, help='Set ouput filename, defaults to stdout')
 
     args = parser.parse_args()
     main(**vars(args))
