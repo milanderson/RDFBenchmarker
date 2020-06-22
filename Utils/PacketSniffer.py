@@ -12,8 +12,7 @@ class TCPPacketSniffer():
 
     def _log(self, *args):
         if self.outfile is not None:
-            for a in args:
-                self.outfile.write(a.__str__())
+            self.outfile.write(", ".join([a.__str__() for a in args]))
         else:
             print(args)
 
