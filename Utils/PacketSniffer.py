@@ -1,6 +1,12 @@
-import socket, struct, binascii, argparse
+import socket, struct, binascii, argparse, platform
+
+class ETH_PROTO():
+    ETH_P_LOOP = 0x0060
+    ETH_P_IP = 0x0800
+    ETH_P_ALL = 0x0003
 
 class TCPPacketSniffer():
+
     def __init__(self, host="", port=-1, bufferSize=100000, outFname="", minCaptureSize=52):
         self.host = host
         self.port = port
@@ -40,23 +46,32 @@ class TCPPacketSniffer():
             (hasattr(packet, "tcpFrame") and (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
 
     def run(self):
-        s = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(0x0800))
+        if platform.system() == 'Windows':
+            s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
+        else:
+            s = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(ETH_PROTO.ETH_P_ALL))
 
         while True:
             data, addr = s.recvfrom(self.bufferSize)
             p = Packet(data, addr)
             #p = self._rejoinTCPPackets(p)
+            if len(data) > 2000:
+                print("-------------------------")
+                self._log(len(data))
+                if hasattr(p, "ipFrame"):
+                    self._log(p.ipFrame.id, p.ipFrame.offset)
+                print(data)
             if self.isMatch(p):
                 # WRITE DATA HERE
                 self._log("ID: ", p.ipFrame.id, "offset: ", p.ipFrame.offset, "Header Length: ", p.ipFrame.packet_len, "Packet Len: ", len(p.ipFrame.data), "has TCP: ", hasattr(p, "tcpFrame"))
-                if hasattr(p, "tcpFrame"):
-                    self._log(p.tcpFrame.data)
+                #if hasattr(p, "tcpFrame"):
+                #    self._log(p.tcpFrame.data)
 
 class Packet():
     def __init__(self, data, addr):
         self.addr = addr
         self.ethFrame = EthernetFrame(data)
-        if self.ethFrame.protocol in [EthernetFrame.PROTOCOL.IPV4, EthernetFrame.PROTOCOL.IPv6]:
+        if str(self.ethFrame.protocol) in [str(EthernetFrame.PROTOCOL.IPV4), str(EthernetFrame.PROTOCOL.IPv6)]:
             self.ipFrame = IPFrame(self.ethFrame.data)
 
             if self.ipFrame.protocol == IPFrame.PROTOCOL.TCP:
@@ -70,6 +85,9 @@ class EthernetFrame():
 
     def __init__(self, data):
         self.dst_mac, self.src_mac, self.protocol, self.data = EthernetFrame._parseFrame(data)
+        # compatibility with old new helify lib
+        if type(self.protocol) is bytes:
+            self.protocol = self.protocol.decode("utf-8")
 
     @staticmethod
     def _parseFrame(data):
@@ -78,7 +96,10 @@ class EthernetFrame():
 
     @staticmethod
     def _get_mac_addr(addr):
-        bytes_str = map(lambda x: '{:02x}'.format(ord(x)), addr)
+        # compatibility with newer unpack lib
+        getNumVal = ord if type(addr) is str else lambda x: x
+
+        bytes_str = map(lambda x: '{:02x}'.format(getNumVal(x)), addr)
         mac_addr = ':'.join(bytes_str).upper()
         return mac_addr
 
@@ -90,8 +111,11 @@ class IPFrame():
         SCTP = 132
 
     def __init__(self, data):
-        self.version = ord(data[0]) >> 4
-        self.header_len = (ord(data[0]) & 0xF) * 4
+        # compatibility with newer unpack lib
+        getNumVal = ord if type(data) is str else lambda x: x
+
+        self.version = getNumVal(data[0]) >> 4
+        self.header_len = (getNumVal(data[0]) & 0xF) * 4
         if self.version == 4:
             self.packet_len, self.id, self.offset, self.ttl, self.protocol, src, target = struct.unpack('! H H H B B 2x 4s 4s', data[2:20])
             self.offset = self.offset & 8191
