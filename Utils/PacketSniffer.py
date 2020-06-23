@@ -55,12 +55,6 @@ class TCPPacketSniffer():
             data, addr = s.recvfrom(self.bufferSize)
             p = Packet(data, addr)
             #p = self._rejoinTCPPackets(p)
-            if len(data) > 2000:
-                print("-------------------------")
-                self._log(len(data))
-                if hasattr(p, "ipFrame"):
-                    self._log(p.ipFrame.id, p.ipFrame.offset)
-                print(data)
             if self.isMatch(p):
                 # WRITE DATA HERE
                 self._log("ID: ", p.ipFrame.id, "offset: ", p.ipFrame.offset, "Header Length: ", p.ipFrame.packet_len, "Packet Len: ", len(p.ipFrame.data), "has TCP: ", hasattr(p, "tcpFrame"))
