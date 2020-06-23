@@ -34,7 +34,7 @@ class TCPPacketSniffer():
             
     def isMatch(self, packet):
         #TODO: Better IP checking
-        return packet and len(packet.ethFrame.data) > self.minCapSize + 12 and hasattr(packet, "ipFrame") and \
+        return packet and len(packet.ethFrame.data) + 12 > self.minCapSize and hasattr(packet, "ipFrame") and \
             (self.host in ["", "0.0.0.0"] or self.host == packet.ipFrame.tar_ip) and \
             (packet.ipFrame.offset > 0 or \
             (hasattr(packet, "tcpFrame") and (self.port == -1 or self.port == packet.tcpFrame.tar_port)))
