@@ -63,11 +63,13 @@ class Benchmarker():
             curLine.append(edTime - stTime)
 
             for db in self.testInfo.compDBs:
+                #TODO: handle query errors
                 stTime = time.time()
                 db.setQuery(qry)
-                rawResult = db.query().convert().decode("utf-8")
-                res = pd.read_csv(StringIO(rawResult))
+                rawResult = db.query()
                 edTime = time.time()
+                strResult = rawResult.convert().decode("utf-8")
+                res = pd.read_csv(StringIO(strResult))
 
                 curLine.append(len(groundTruth))
                 curLine.append(sum([x in groundTruth[useCol] for x in res[useCol]]))
